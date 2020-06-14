@@ -16,7 +16,7 @@ export class EventEmitter {
 
   _insertListener(event, listener, position) {
     if (this.listeners[event] && this.listeners[event].length >= this.maxListeners) {
-      throw console.error(`Max listeners are limit to ${this.maxListeners}`)
+      throw new Error(`Max listeners are limit to ${this.maxListeners}`)
     }
 
     if (Array.isArray(this.listeners[event])) {

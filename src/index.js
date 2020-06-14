@@ -1,3 +1,3 @@
-export * from './EventEmitter'
-export * from './deepCopy'
-export * from './shallowCopy'
+export * from './event-emitter'
+export * from './copy'
+export * from './observer-pattern'

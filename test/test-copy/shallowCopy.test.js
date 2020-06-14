@@ -1,4 +1,4 @@
-import { shallowCopy } from '../src'
+import { shallowCopy } from '../../src'
 
 it('shallow copy should only copy one dimension', () => {
   const o = {

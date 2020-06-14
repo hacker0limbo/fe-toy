@@ -1,4 +1,4 @@
-import { deepCopy } from '../src'
+import { deepCopy } from '../../src'
 
 it('deep copy should copy all dimenstions', () => {
   const o = {

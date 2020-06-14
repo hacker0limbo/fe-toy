@@ -1,4 +1,4 @@
-import { EventEmitter } from '../src'
+import { EventEmitter } from '../../src'
 
 let eventEmitter
 
