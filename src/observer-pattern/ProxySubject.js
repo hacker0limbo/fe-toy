@@ -5,7 +5,7 @@ export class ProxySubject extends Subject {
     super(state)
     // 这里的 state 只能是一个对象或者数组
     this.state = new Proxy(state, {
-      set = (target, key, value, receiver) => {
+      set: (target, key, value, receiver) => {
         const result = Reflect.set(target, key, value, receiver)
         this.notifyObservers(this.state)
         return result
