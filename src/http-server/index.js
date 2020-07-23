@@ -1,7 +1,7 @@
 import http from 'http'
 import url from 'url'
 
-export class App {
+export class ServerApp {
   constructor() {
     this.server = this.init()
     this.routeHandler = {
@@ -21,12 +21,27 @@ export class App {
     return http.createServer((req, res) => {
       const pathname = url.parse(req.url).pathname
       const method = req.method.toUpperCase()
-      if (typeof this.routeHandler?.[pathname]?.[method] === 'function') {
-        this.routeHandler[pathname][method](req, res)
+      req.body = ''
+      if (method === 'POST') {
+        req.on('data', data => {
+          req.body += data
+        })
+
+        req.on('end', () => {
+          this.handleRoutes(pathname, method, req, res)
+        })
       } else {
-        this.routeHandler['*'].GET(req, res)
+        this.handleRoutes(pathname, method, req, res)
       }
     })
+  }
+
+  handleRoutes(pathname, method, req, res) {
+    if (typeof this.routeHandler?.[pathname]?.[method] === 'function') {
+      this.routeHandler[pathname][method](req, res)
+    } else {
+      this.routeHandler['*']['GET'](req, res)
+    }
   }
 
   route(pathname, method, callback) {
@@ -47,6 +62,18 @@ export class App {
     res.writeHead(404, { "Content-Type": "text/html" })
     res.write("404 Not found")
     res.end()
+  }
+
+  getServer() {
+    return this.server
+  }
+
+  get(pathname, callback) {
+    this.route(pathname, 'GET', callback)
+  }
+
+  post(pathname, callback) {
+    this.route(pathname, 'POST', callback)
   }
 }
 
