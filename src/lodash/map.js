@@ -1,5 +1,5 @@
 /**
- * 
+ * 接受一个 array 或者对象, 返回永远是一个数组
  * @param {object|Array} collection 
  * @param {Function} callback 
  * @returns {Array}
