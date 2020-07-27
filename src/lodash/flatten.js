@@ -6,10 +6,9 @@
 export const flatten = (array) => {
   return array.reduce((result, e) => {
     if (Array.isArray(e)) {
-      e.forEach(v => result.push(v))
+      return [...result, ...e]
     } else {
-      result.push(e)
+      return [...result, e]
     }
-    return result
   }, [])
 }
