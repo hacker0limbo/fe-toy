@@ -1,5 +1,5 @@
 /**
- * 将两个数组打包
+ * 将两个数组打包成一个对象
  * @param {array} props 
  * @param {array} values
  * @example
