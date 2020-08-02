@@ -1,4 +1,4 @@
-import { compose } from "../../src"
+import { compose } from "../../../src"
 
 it('compose should call from right to left', () => {
   const square = x => x * x

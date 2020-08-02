@@ -1,4 +1,4 @@
-import { flatten } from '../../src'
+import { flatten } from '../../../src'
 
 it('flatten should only flat one dimension', () => {
   expect(flatten([1])).toEqual([1])

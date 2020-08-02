@@ -1,4 +1,4 @@
-import { initial } from '../../src'
+import { initial } from '../../../src'
 
 it('initial should return all except last elements', () => {
   expect(initial([])).toEqual([])

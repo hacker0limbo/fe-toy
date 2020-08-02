@@ -1,4 +1,4 @@
-import { intersectionBy } from "../../src"
+import { intersectionBy } from "../../../src"
 
 it('intersectionBy should accepts a callback for intersection', () => {
   expect(intersectionBy([2.1, 1.2], [2.3, 3.4])).toEqual([])

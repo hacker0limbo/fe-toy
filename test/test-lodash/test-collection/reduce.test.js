@@ -1,4 +1,4 @@
-import { reduce } from '../../src'
+import { reduce } from '../../../src'
 
 it('reudce should accept both object and array, and returns a single final value', () => {
   expect(reduce([1, 2, 3], (result, v, i) => result + v + i)).toBe(9)

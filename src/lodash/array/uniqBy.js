@@ -1,5 +1,3 @@
-import { uniq } from './uniq'
-
 /**
  * 去重同时允许有一个回调进行筛选
  * @param {Array} array 

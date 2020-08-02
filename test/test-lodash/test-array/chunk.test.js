@@ -1,4 +1,4 @@
-import { chunk } from '../../src'
+import { chunk } from '../../../src'
 
 it('chunk should split array', () => {
   expect(chunk([1, 2, 3, 4])).toEqual([[1], [2], [3], [4]])

@@ -1,4 +1,4 @@
-import { tail } from "../../src"
+import { tail } from "../../../src"
 
 it('tail should return all elements except the first one', () => {
   expect(tail([])).toEqual([])

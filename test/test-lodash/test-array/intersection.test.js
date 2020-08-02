@@ -1,4 +1,4 @@
-import { intersection } from '../../src'
+import { intersection } from '../../../src'
 
 it('intersection should accept >= 2 args', () => {
   const x = [1, 2, 3, 4, 6]

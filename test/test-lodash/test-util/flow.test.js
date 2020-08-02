@@ -1,4 +1,4 @@
-import { flow } from "../../src"
+import { flow } from "../../../src"
 
 it('flow should call from left to right', () => {
   const square = x => x * x

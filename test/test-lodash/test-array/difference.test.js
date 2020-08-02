@@ -1,4 +1,4 @@
-import { difference } from '../../src'
+import { difference } from '../../../src'
 
 it('difference should return an array of array values not included in the other given arrays', () => {
   expect(difference([2, 1], [2, 3], [4])).toEqual([1])
