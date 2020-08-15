@@ -5,6 +5,7 @@
  */
 export const pickBy = (object, callback) => {
   return Object.entries(object).reduce((result, [k, v]) => {
+    
     return callback(v, k) ? { ...result, [k]: v } : result
   }, {})
 }
