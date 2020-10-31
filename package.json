@@ -1,14 +1,13 @@
 {
   "name": "fe-toy",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Some front-end snippets implementation",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "npx babel src --out-dir dist",
     "preversion": "npm run test",
-    "version": "npm run build && git add . && git commit -m",
-    "postversion": "git push origin master"
+    "version": "npm run build"
   },
   "keywords": [
     "toy"
