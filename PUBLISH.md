@@ -8,7 +8,7 @@ git add .
 git commit -m "commit message"
 
 # 发布或更新
-npm --no-git-tag-version version patch
+npm --no-git-tag-version version patch -m "upgrade to %s"
 npm publish
 ```
 
